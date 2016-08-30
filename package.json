@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/underdal/slackbot#readme",
   "dependencies": {
     "slackbots": "^0.5.2"
+  },
+  "engines": {
+    "node": "6.0.0"
   }
 }

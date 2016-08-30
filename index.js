@@ -4,7 +4,7 @@ const SlackBot = require('slackbots');
 // We create a new Slack bot using the Token and name from before
 const bot = new SlackBot({
   // Replace <SLACK_TOKEN> with the token from step E
-  token: 'xoxb-74489224052-IU1oT7vDhtr8x0oWhpI0iT6w',
+  token: process.env.SLACK_TOKEN,
   // Replace <BOT_NAME> with the name from step E
   name: 'WonderValley'
 });
