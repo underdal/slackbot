@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -28,9 +27,5 @@
   "devDependencies": {
     "json-loader": "^0.5.4",
     "webpack": "^1.13.2"
-  },
-  "files": [
-    "index.js",
-    "umd"
-  ]
+  }
 }
