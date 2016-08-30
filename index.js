@@ -34,12 +34,12 @@ bot.on('message', function(data) {
 
     if (user) {
       // The bot gets the user name from the user ID, and attempts to send the user a random complement
-       // We will now get a random compliment from our module
-       bot.getUserById(user).then(({ name }) => {
+      // We will now get a random compliment from our module
+      bot.getUserById(user).then(({ name }) => {
         bot.postMessageToUser(name, random());
       });
-     }
-   }
- });
+    }
+  }
+});
 
 
