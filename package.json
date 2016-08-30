@@ -5,11 +5,15 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/underdal/slackbot.git"
+  },
+  "engines": {
+    "node": "6.0.0"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +22,11 @@
   },
   "homepage": "https://github.com/underdal/slackbot#readme",
   "dependencies": {
+    "@underdal/compliments": "^1.0.0",
     "slackbots": "^0.5.2"
   },
-  "engines": {
-    "node": "6.0.0"
+  "devDependencies": {
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.2"
   }
 }

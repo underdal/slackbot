@@ -18,18 +18,10 @@ bot.on('start', () => {
     'underdal',
     // The message to send
     'I am awsome!'
-  );
+    );
 });
 
-const compliments = [
-  'You are fantastic!',
-  'You are awesome!',
-  'Your smile is contagious!',
-  'You are an inspiration!'
-];
-
-// The current compliment
-let currentCompliment = 0;
+const { random } = require('@underdal/compliments');
 
 bot.on('message', function(data) {
   // We define a RegExp pattern the bot is looking for
@@ -42,18 +34,12 @@ bot.on('message', function(data) {
 
     if (user) {
       // The bot gets the user name from the user ID, and attempts to send the user a random complement
-      bot.getUserById(user).then(({ name }) => {
-        bot.postMessageToUser(name, compliments[currentCompliment]);
-        currentCompliment =
-          // We increase the current compliment with one
-          (currentCompliment + 1 )
-          // We are suing modulus here
-          // It will make sure we never go outside of the array size
-          // This will result in the following pattern with out current array 0, 1, 2, 3, 0, 1, 2, 3, 0, ...
-          % compliments.length;
+       // We will now get a random compliment from our module
+       bot.getUserById(user).then(({ name }) => {
+        bot.postMessageToUser(name, random());
       });
-    }
-  }
-});
+     }
+   }
+ });
 
 
